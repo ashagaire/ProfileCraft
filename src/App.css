@@ -1,47 +1,56 @@
 .custom-button {
   text-transform: none !important;
   border-radius: 6px !important;
-  background-color: rgb(235, 151, 73) !important; 
-   box-shadow: none !important;
+  background-color: rgb(235, 151, 73) !important;
+  box-shadow: none !important;
   white-space: nowrap;
 }
 
 .custom-button:hover {
-  background-color: rgb(247, 177, 79) !important; 
+  background-color: rgb(247, 177, 79) !important;
 }
 
 .custom-button:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 0px rgba(235, 151, 73); 
+  box-shadow: 0 0 0 0px rgba(235, 151, 73);
 }
 
 .custom-button:disabled {
   pointer-events: none;
-  opacity: 0.5; 
+  opacity: 0.5;
 }
 
 .custom-button-outline {
-  text-transform: none  !important;
-  border-radius: 6px  !important;
-  color: #f19f41  !important;             
-  border: 2px solid #f19f41  !important;   
+  text-transform: none !important;
+  border-radius: 6px !important;
+  color: #f19f41 !important;
+  border: 2px solid #f19f41 !important;
   white-space: nowrap;
 }
 
 .custom-button-outline:hover,
 .custom-button-outline:focus {
-   color: #f9f7f5  !important; 
-   background-color: rgb(187, 125, 37) !important; 
+  color: #f9f7f5 !important;
+  background-color: rgb(187, 125, 37) !important;
 }
 
 .custom-button-badge {
   text-transform: none !important;
-  border-radius: 20px  !important;
-  background-color: rgb(19, 90, 32) !important; 
+  border-radius: 20px !important;
+  background-color: rgb(19, 90, 32) !important;
   box-shadow: none !important;
   white-space: nowrap;
 }
 
+.custom-button-tags {
+  text-transform: none !important;
+  border-radius: 6px !important;
+  color: #f19f41 !important;
+  border: 1px solid #ede7e4 !important;
+  background-color: rgb(249, 242, 245) !important;
+  box-shadow: none !important;
+  white-space: nowrap;
+}
 
 .nav-link {
   position: relative;
@@ -51,7 +60,7 @@
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -4px;
@@ -69,17 +78,3 @@
 .nav-link:hover {
   color: #f39419;
 }
-
-.timeline-item {
-    @apply relative pl-8;
-  }
-
-  .timeline-item:after {
-    content: '';
-    @apply absolute w-4 h-4 rounded-full bg-primary left-[-8px] top-[10px];
-  }
-
-  /* .timeline-item:not(:last-child):before {
-    content: '';
-    @apply absolute w-0.5 h-[calc(100%+1rem)] bg-muted left-0 top-[10px];
-  } */

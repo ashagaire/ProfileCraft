@@ -1,8 +1,8 @@
-interface NavItem {
+interface NavItemProps {
   to: string;
   label: string;
 }
-export const navLinks: NavItem[] = [
+export const navLinks: NavItemProps[] = [
   { to: "home", label: "Home" },
   { to: "about", label: "About" },
   { to: "experience", label: "Experience" },

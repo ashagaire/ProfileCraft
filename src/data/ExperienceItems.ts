@@ -6,8 +6,8 @@ interface ExperienceProps {
   responsibilities: string[];
 }
 
-export const experienceItems: ExperienceProps[] = [
-    {
+export const experiences: ExperienceProps[] = [
+  {
     id: 1,
     title: "Design Handover Engineer",
     company: "Olkiluoto Nuclear Power Plant, Kaiku HR, AREVA N.P",
@@ -17,8 +17,8 @@ export const experienceItems: ExperienceProps[] = [
       "Communicated with client (TVO), resolving their comments regarding final documentation packages",
       "Communicated with engineering departments, suppliers to resolve document's metadata related issues",
       "Participated in bi-weekly meeting with client (TVO), summarizing meeting, preparing MOM",
-      "Prepared instructions files, trained new team members"
-    ]
+      "Prepared instructions files, trained new team members",
+    ],
   },
   {
     id: 2,
@@ -28,8 +28,8 @@ export const experienceItems: ExperienceProps[] = [
     responsibilities: [
       "Designed pneumatic system for reciprocating motion",
       "Designed and modelled assistive transmission system",
-      "Conducted bicycle physics calculations"
-    ]
+      "Conducted bicycle physics calculations",
+    ],
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ export const experienceItems: ExperienceProps[] = [
       "Led project planning and team coordination",
       "Developed engineering specifications",
       "Performed strength, bearing lifetime calculations",
-      "Created 3D models and engineering drawings"
-    ]
-  }
- ]
+      "Created 3D models and engineering drawings",
+    ],
+  },
+];
