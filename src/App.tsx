@@ -1,21 +1,45 @@
 import { Container, Box, Typography } from '@mui/material';
 import './App.css';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <Container maxWidth="md">
-      <Box mt={5}>
-        <Typography variant="h4" gutterBottom>
-          MUI Layout Project
-        </Typography>
-        <Typography variant="body1" className="text-3xl font-bold underline">
-          Start building your layout components below...
-        </Typography>
-        <div className="text-3xl font-bold text-blue-600 p-6">
-      Hello Tailwind + React + TypeScript!
-    </div>
-      </Box>
-    </Container>
+    <div className="min-h-screen ">
+        <div className="fixed top-0 left-0 right-0 z-50">
+          <Navbar />
+        </div>
+        {/* <div className="mt-20">
+          <section id="asha" className="w-full -mt-20 ">
+            <Asha />
+          </section>
+
+          <section id="about">
+            <About />
+          </section>
+
+          <section id="projects">
+            <Projects />
+          </section>
+
+          <section id="skills">
+            <Skills />
+          </section>
+
+          <section id="experience">
+            <Experience />
+          </section>
+
+          <section id="education">
+            <Education />
+          </section>
+
+          <section id="contact">
+            <Contact />
+          </section>
+        </div> */}
+        {/* <Footer /> */}
+        {/* <ToastContainer /> */}
+      </div>
   );
 }
 
