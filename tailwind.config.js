@@ -6,8 +6,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#FFD600',
+        primary: '#f19f41',
+        // foreground: '#F8FAFC',
       },
+      fontWeight: {
+  normal: '400',
+  medium: '550', 
+  semibold: '600',
+  bold: '700',
+},
     },
   },
   plugins: [],

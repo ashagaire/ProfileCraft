@@ -1,6 +1,8 @@
-import { Container, Box, Typography } from '@mui/material';
 import './App.css';
 import Navbar from './components/Navbar';
+import About from './components/About';
+import Home from './components/Home';
+import Experience from './components/Experience';
 
 function App() {
   return (
@@ -8,16 +10,21 @@ function App() {
         <div className="fixed top-0 left-0 right-0 z-50">
           <Navbar />
         </div>
-        {/* <div className="mt-20">
-          <section id="asha" className="w-full -mt-20 ">
-            <Asha />
-          </section>
 
+        <div className="mt-20 ">
+          <section id="home">
+            <Home />
+          </section>
+          
           <section id="about">
             <About />
           </section>
+          
+          <section id="experience">
+            <Experience />
+          </section>
 
-          <section id="projects">
+          {/* <section id="projects">
             <Projects />
           </section>
 
@@ -35,8 +42,8 @@ function App() {
 
           <section id="contact">
             <Contact />
-          </section>
-        </div> */}
+          </section> */}
+        </div>
         {/* <Footer /> */}
         {/* <ToastContainer /> */}
       </div>

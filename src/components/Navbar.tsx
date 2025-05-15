@@ -37,7 +37,7 @@ export default function Navbar() {
                 spy={true}
                 offset={-100}
                 activeClass="active"
-                className="nav-link "
+                className="nav-link font-medium"
               >
                 {link.label}
               </ScrollLink>
