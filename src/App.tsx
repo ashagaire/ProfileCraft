@@ -15,7 +15,7 @@ function App() {
         <Navbar />
       </div>
 
-      <div className="mt-20 ">
+      <div>
         <section id="home">
           <Home />
         </section>

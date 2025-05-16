@@ -35,7 +35,7 @@ export default function Navbar() {
                 smooth={true}
                 duration={500}
                 spy={true}
-                offset={-100}
+                offset={-70}
                 activeClass="active"
                 className="nav-link font-medium"
               >

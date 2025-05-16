@@ -4,7 +4,7 @@ import { Slide } from "@mui/material";
 
 export default function Home() {
   return (
-    <section id="home" className="py-8  md:py-20">
+    <section id="home" className="py-8 mt-20  md:py-20">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center">
           <Slide direction="right" in={true} timeout={1000}>

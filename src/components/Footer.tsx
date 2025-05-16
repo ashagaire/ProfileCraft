@@ -34,9 +34,9 @@ export default function Footer() {
                 key={link.to}
                 to={link.to}
                 smooth={true}
-                duration={500}
+                duration={1000}
                 spy={true}
-                offset={-100}
+                offset={-70}
                 className="footer-nav-link "
               >
                 {link.label}
@@ -50,9 +50,9 @@ export default function Footer() {
                 key="home"
                 to="home"
                 smooth={true}
-                duration={500}
+                duration={1000}
                 spy={true}
-                offset={-100}
+                offset={-70}
                 className="footer-nav-link "
               >
                 {FaArrowUp({ className: "text-l" })}
