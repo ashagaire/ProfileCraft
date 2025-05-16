@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function Projects() {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.2,
   });
 
@@ -43,12 +43,7 @@ export default function Projects() {
                   <p className="text-gray-700 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, idx) => (
-                      <Button
-                        key={idx}
-                        size="small"
-                        className="custom-button-tags"
-                        variant="outlined"
-                      >
+                      <Button key={idx} className="custom-button-tags">
                         {tag}
                       </Button>
                     ))}
