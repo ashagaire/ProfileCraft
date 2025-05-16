@@ -24,10 +24,7 @@ export default function Projects() {
         <Slide direction="up" in={inView} timeout={1000}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
-              <Card
-                key={project.id}
-                className="project-card overflow-hidden shadow-lg hover:shadow-xl"
-              >
+              <Card key={project.id} className="project-card overflow-hidden ">
                 <div className="h-48 overflow-hidden">
                   <img
                     src={project.image}

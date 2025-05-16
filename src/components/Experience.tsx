@@ -35,14 +35,7 @@ export default function Experience() {
                     <TimelineConnector sx={{ backgroundColor: "#e5e7eb" }} />
                   </TimelineSeparator>
                   <TimelineContent>
-                    <Card
-                      className="ml-2 md:ml-4"
-                      sx={{
-                        borderWidth: "1px",
-                        borderStyle: "solid",
-                        borderColor: "#e5e7eb",
-                      }}
-                    >
+                    <Card className="ml-2 md:ml-4">
                       <CardContent>
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                           <div>

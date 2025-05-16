@@ -57,7 +57,7 @@ export default function Skills() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {competencies.map((comp, index) => (
-                <Card key={index} className="bg-white shadow-md">
+                <Card key={index} className="bg-white ">
                   <CardContent className="p-4">
                     <div className="flex items-center mb-2">
                       {comp.icon({ className: "text-2xl text-primary mr-3" })}

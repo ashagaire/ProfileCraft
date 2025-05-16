@@ -55,6 +55,19 @@
   white-space: nowrap;
 }
 
+.custom-button-scroll-top {
+  background-color: #1f2937;
+  color: #9ca3af;
+  border: 1px solid #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: color 0.2s, background 0.2s;
+}
+
 .nav-link {
   position: relative;
   color: #444;
@@ -80,4 +93,14 @@
 
 .nav-link:hover {
   color: #f39419;
+}
+
+.footer-nav-link {
+  color: #9b9a99;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-nav-link:hover {
+  color: #f9f7f5;
 }

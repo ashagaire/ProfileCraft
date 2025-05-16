@@ -1,26 +1,15 @@
-import { useState } from "react";
-import {
-  Typography,
-  Card,
-  CardContent,
-  TextField,
-  Input,
-  Button,
-} from "@mui/material";
+import { useState, useEffect } from "react";
+import { Card, CardContent, TextField, Button } from "@mui/material";
 import { Slide } from "@mui/material";
-
-import {
-  FaEnvelope,
-  FaPhone,
-  FaMapMarkerAlt,
-  FaLinkedin,
-  FaGithub,
-  FaTwitter,
-  FaInstagram,
-} from "react-icons/fa";
+import { useForm } from "@formspree/react";
+import { toast } from "react-toastify";
+import SocialMedia from "./SocialMedia";
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 
 export default function ContactSection() {
+  const [state, handleSubmit] = useForm("123xyz");
+
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -32,8 +21,24 @@ export default function ContactSection() {
     subject: "",
     message: "",
   });
-  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success("Message Sent Successfully!");
+    } else if (state.errors && Object.keys(state.errors).length > 0) {
+      toast.error("Message Failed To Send!");
+    }
+  }, [state.succeeded]);
 
   return (
     <section id="contact" className="py-16 bg-gray-100" ref={ref}>
@@ -51,8 +56,8 @@ export default function ContactSection() {
 
         <div className="container flex flex-col md:flex-row gap-8">
           <Slide direction="right" in={inView} timeout={1000}>
-            <div className="md:w-1/3 ">
-              <Card className="mb-6 shadow-lg hover:shadow-xl ">
+            <div className="md:w-1/3">
+              <Card className="mb-6   ">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-primary mb-4">
                     Contact Information
@@ -60,7 +65,7 @@ export default function ContactSection() {
 
                   <div className="flex items-start mb-4 hover:translate-x-1 transition-transform duration-200">
                     <div className="text-primary mr-4 mt-1">
-                      {FaEnvelope({ className: "text-2xl" })}
+                      {FaEnvelope({ className: "text-xl" })}
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">Email</h4>
@@ -70,7 +75,7 @@ export default function ContactSection() {
 
                   <div className="flex items-start mb-4 hover:translate-x-1 transition-transform duration-200">
                     <div className="text-primary mr-4 mt-1">
-                      {FaPhone({ className: "text-2xl" })}
+                      {FaPhone({ className: "text-xl" })}
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">Phone</h4>
@@ -80,7 +85,7 @@ export default function ContactSection() {
 
                   <div className="flex items-start mb-4 hover:translate-x-1 transition-transform duration-200">
                     <div className="text-primary mr-4 mt-1">
-                      {FaMapMarkerAlt({ className: "text-2xl" })}
+                      {FaMapMarkerAlt({ className: "text-xl" })}
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">Location</h4>
@@ -90,127 +95,83 @@ export default function ContactSection() {
                 </CardContent>
               </Card>
 
-              <Card className="shadow-lg hover:shadow-xl ">
+              <Card>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-primary mb-4">
                     Connect
                   </h3>
-                  <div className="flex space-x-4">
-                    <a
-                      href="#"
-                      className="text-primary hover:text-primary/80 hover:scale-110 transition-transform text-xl"
-                    >
-                      {FaLinkedin({ className: "text-2xl" })}
-                    </a>
-                    <a
-                      href="#"
-                      className="text-primary hover:text-primary/80 hover:scale-110 transition-transform text-xl"
-                    >
-                      {FaGithub({ className: "text-2xl" })}
-                    </a>
-                    <a
-                      href="#"
-                      className="text-primary hover:text-primary/80 hover:scale-110 transition-transform text-xl"
-                    >
-                      {FaTwitter({ className: "text-2xl" })}
-                    </a>
-                    <a
-                      href="#"
-                      className="text-primary hover:text-primary/80 hover:scale-110 transition-transform text-xl"
-                    >
-                      {FaInstagram({ className: "text-2xl" })}
-                    </a>
-                  </div>
+                  <SocialMedia textCss="text-primary hover:text-primary/80" />
                 </CardContent>
               </Card>
             </div>
           </Slide>
           <Slide direction="left" in={inView} timeout={1000}>
             <div className="md:w-2/3 ">
-              <Card className="shadow-lg hover:shadow-xl ">
+              <Card>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-primary mb-6">
                     Send Me a Message
                   </h3>
 
-                  <form>
+                  <form onSubmit={(e) => handleSubmit(e)}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                      <div>
+                      <div className="form-group">
                         <label
                           htmlFor="name"
                           className="block text-gray-700 mb-2"
                         >
                           Name
                         </label>
-                        <Input
+                        <TextField
                           type="text"
+                          variant="outlined"
                           id="name"
                           name="name"
                           value={formData.name}
-                          // onChange={handleChange}
-                          // onBlur={handleBlur}
+                          onChange={handleChange}
                           placeholder="Your Name"
-                          className={formErrors.name ? "border-red-500" : ""}
                           required
                         />
-                        {formErrors.name && (
-                          <p className="text-red-500 text-sm mt-1">
-                            {formErrors.name}
-                          </p>
-                        )}
                       </div>
-                      <div>
+                      <div className="form-group">
                         <label
                           htmlFor="email"
                           className="block text-gray-700 mb-2"
                         >
                           Email
                         </label>
-                        <Input
+                        <TextField
                           type="email"
                           id="email"
                           name="email"
                           value={formData.email}
-                          // onChange={handleChange}
-                          // onBlur={handleBlur}
+                          onChange={handleChange}
                           placeholder="Your Email"
-                          className={formErrors.email ? "border-red-500" : ""}
                           required
                         />
-                        {formErrors.email && (
-                          <p className="text-red-500 text-sm mt-1">
-                            {formErrors.email}
-                          </p>
-                        )}
                       </div>
                     </div>
 
-                    <div className="mb-6">
+                    <div className="form-group mb-6">
                       <label
                         htmlFor="subject"
                         className="block text-gray-700 mb-2"
                       >
                         Subject
                       </label>
-                      <Input
+                      <TextField
                         type="text"
                         id="subject"
                         name="subject"
                         value={formData.subject}
-                        //   onChange={handleChange}
-                        //   onBlur={handleBlur}
+                        onChange={handleChange}
                         placeholder="Subject"
-                        className={formErrors.subject ? "border-red-500" : ""}
+                        className="w-full"
                         required
                       />
-                      {formErrors.subject && (
-                        <p className="text-red-500 text-sm mt-1">
-                          {formErrors.subject}
-                        </p>
-                      )}
                     </div>
 
-                    <div className="mb-6">
+                    <div className="form-group mb-6">
                       <label
                         htmlFor="message"
                         className="block text-gray-700 mb-2"
@@ -221,18 +182,13 @@ export default function ContactSection() {
                         id="message"
                         name="message"
                         value={formData.message}
-                        //   onChange={handleChange}
-                        //   onBlur={handleBlur}
-                        rows={5}
+                        onChange={handleChange}
+                        multiline
+                        rows={3}
+                        className="w-full"
                         placeholder="Your Message"
-                        className={formErrors.message ? "border-red-500" : ""}
                         required
                       />
-                      {formErrors.message && (
-                        <p className="text-red-500 text-sm mt-1">
-                          {formErrors.message}
-                        </p>
-                      )}
                     </div>
 
                     <Button
@@ -240,41 +196,8 @@ export default function ContactSection() {
                       color="primary"
                       className="custom-button"
                       type="submit"
-                      disabled={
-                        isSubmitting || Object.keys(formErrors).length > 0
-                      }
                     >
-                      <span
-                        className={`flex items-center justify-center transition-all duration-300 ${
-                          isSubmitting ? "opacity-0" : "opacity-100"
-                        }`}
-                      >
-                        {isSubmitting ? "Sending..." : "Send Message"}
-                      </span>
-                      {isSubmitting && (
-                        <span className="absolute inset-0 flex items-center justify-center">
-                          <svg
-                            className="animate-spin h-5 w-5 text-white"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                          >
-                            <circle
-                              className="opacity-25"
-                              cx="12"
-                              cy="12"
-                              r="10"
-                              stroke="currentColor"
-                              strokeWidth="4"
-                            ></circle>
-                            <path
-                              className="opacity-75"
-                              fill="currentColor"
-                              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                            ></path>
-                          </svg>
-                        </span>
-                      )}
+                      Send Message
                     </Button>
                   </form>
                 </CardContent>

@@ -6,6 +6,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -38,21 +39,8 @@ function App() {
         <section id="contact">
           <Contact />
         </section>
-
-        {/* 
-          <section id="skills">
-            <Skills />
-          </section>
-
-          <section id="education">
-            <Education />
-          </section>
-
-          <section id="contact">
-            <Contact />
-          </section> */}
       </div>
-      {/* <Footer /> */}
+      <Footer />
       {/* <ToastContainer /> */}
     </div>
   );
