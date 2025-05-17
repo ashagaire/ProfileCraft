@@ -1,4 +1,4 @@
-# Personal Portfolio
+# Profile Craft
 
 This is portfolio website developed for client using React TypeScript, Tailwind CSS and Material UI. The website showcases owner's career information, skills, and experience, along with a downloadable version of resume.
 
