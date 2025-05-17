@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+# Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is portfolio website developed for client using React TypeScript, Tailwind CSS and Material UI. The website showcases owner's career information, skills, and experience, along with a downloadable version of resume.
 
-## Available Scripts
+## Live Demo
 
-In the project directory, you can run:
+The website is live and can be accessed [here](https://paudelarjun.com.np/)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Career Information:** Displays detailed information owner's career, including milestones, achievements, and key projects.
+- **Skills and Experience:** Highlights the technologies and tools owner have worked with.
+- **Downloadable CV:** Provides a link for visitors to download resume.
+- **Responsive UI:** Built with React and Tailwind CSS to ensure the website is fully responsive across various screen sizes.
+- **Material UI:** Integrated Material UI components to enhance the overall user experience with modern UI elements.
+- **Smooth Navigation:** Implemented smooth scrolling and navigation to different sections using `react-scroll`.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React:** JavaScript library for building user interfaces.
+- **TypeScript:** Typed superset of JavaScript for better tooling and safer code.
+- **Tailwind CSS:** Utility-first CSS framework for styling.
+- **Material UI:** React component library for faster and more accessible development.
+- **React Scroll:** For smooth scrolling between sections.
+- **React FontAwesome:** For adding icons to the website.
+- **Firebase Hosting:** Deployed the portfolio to Firebase for fast and reliable hosting.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
