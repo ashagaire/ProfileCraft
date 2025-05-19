@@ -8,7 +8,7 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 
 export default function ContactSection() {
-  const [state, handleSubmit] = useForm("123xyz");
+  const [state, handleSubmit] = useForm("xqaqnbjn");
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -69,7 +69,7 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">Email</h4>
-                      <p className="text-gray-700">arjun.paudel@gmail.com</p>
+                      <p className="text-gray-700">arjun.web@outlook.com</p>
                     </div>
                   </div>
 
@@ -130,7 +130,6 @@ export default function ContactSection() {
                           value={formData.name}
                           onChange={handleChange}
                           placeholder="Your Name"
-                          required
                         />
                       </div>
                       <div className="form-group">
@@ -147,7 +146,6 @@ export default function ContactSection() {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="Your Email"
-                          required
                         />
                       </div>
                     </div>
@@ -167,7 +165,6 @@ export default function ContactSection() {
                         onChange={handleChange}
                         placeholder="Subject"
                         className="w-full"
-                        required
                       />
                     </div>
 

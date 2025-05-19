@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen overflow-x-hidden">
       <div className="fixed top-0 left-0 right-0 z-50">
         <Navbar />
       </div>

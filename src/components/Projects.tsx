@@ -29,7 +29,7 @@ export default function Projects() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover hover:scale-105 "
+                    className="w-full h-auto object-cover hover:scale-105 "
                     loading="lazy"
                   />
                 </div>
@@ -45,15 +45,17 @@ export default function Projects() {
                       </Button>
                     ))}
                   </div>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary font-medium inline-flex items-center group"
-                  >
-                    View Project
-                    <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </a>
+                  {project.url && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary font-medium inline-flex items-center group"
+                    >
+                      View Project
+                      <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    </a>
+                  )}
                 </CardContent>
               </Card>
             ))}

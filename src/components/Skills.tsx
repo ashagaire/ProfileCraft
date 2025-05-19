@@ -18,44 +18,13 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-xl font-bold text-primary mb-6">
-              Technical Skills
-            </h3>
-
-            {skills.map((skill, index) => (
-              <div key={index} className="mb-6">
-                <div className="flex justify-between mb-2">
-                  <span className="font-medium text-gray-800">
-                    {skill.name}
-                  </span>
-                  <span className="text-gray-600">{skill.percentage}%</span>
-                </div>
-                <div className="width-full rounded-full ">
-                  <LinearProgress
-                    variant="determinate"
-                    value={skill.percentage}
-                    sx={{
-                      height: 8,
-                      borderRadius: 5,
-                      backgroundColor: "#e0e0e0",
-                      "& .MuiLinearProgress-bar": {
-                        backgroundColor: "primary.main",
-                      },
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-
+        <div className="grid grid-cols-1  gap-12">
           <div>
             <h3 className="text-xl font-bold text-primary mb-6">
               Professional Competencies
             </h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {competencies.map((comp, index) => (
                 <Card key={index} className="bg-white ">
                   <CardContent className="p-4">
