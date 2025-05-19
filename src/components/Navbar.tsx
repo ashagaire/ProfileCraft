@@ -101,7 +101,7 @@ export default function Navbar() {
                   smooth={true}
                   duration={500}
                   spy={true}
-                  offset={-64}
+                  offset={-65}
                   className="block py-2 text-gray-700 hover:text-primary font-medium cursor-pointer border-b-2 border-gray-200 "
                   onClick={() => setIsOpen(false)}
                 >

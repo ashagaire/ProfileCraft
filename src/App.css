@@ -104,3 +104,47 @@
 .footer-nav-link:hover {
   color: #f9f7f5;
 }
+
+/* Toast container position */
+.Toastify__toast-container {
+  top: 1rem;
+  right: 1rem;
+  position: fixed;
+  z-index: 9999;
+}
+
+/* Toast styles */
+.Toastify__toast {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  padding: 16px;
+}
+
+/* Success toast */
+.Toastify__toast--success {
+  background-color: #f19f41;
+  color: white;
+}
+
+/* Error toast */
+.Toastify__toast--error {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Close button */
+.Toastify__close-button {
+  color: white;
+}
+
+/* Progress bar */
+.Toastify__progress-bar {
+  background-color: #995406;
+}
+
+/* Hover effects */
+.Toastify__toast:hover {
+  opacity: 0.9;
+}

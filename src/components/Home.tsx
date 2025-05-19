@@ -1,6 +1,6 @@
-import { Button } from "@mui/material";
 import cvImage from "../assets/cv_image.jpg";
 import { Slide } from "@mui/material";
+import Info from "./childComponents/Info";
 
 export default function Home() {
   return (
@@ -9,34 +9,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center">
           <Slide direction="right" in={true} timeout={1000}>
             <div className="md:w-1/2 mb-10 md:mb-0">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Hi, I'm <span className="text-primary">Arjun Paudel</span>
-              </h2>
-              <h3 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-6">
-                Mechanical Engineer
-              </h3>
-              <p className="text-lg text-gray-600 mb-8">
-                A diligent professional with extensive skills in mechanical
-                modeling, analysis, machine design, and technical documentation.
-                Currently working with nuclear power plant systems and
-                documentation.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button
-                  className="custom-button"
-                  variant="contained"
-                  disabled={false}
-                >
-                  <a href="#contact">Get in Touch</a>
-                </Button>
-                <Button
-                  className="custom-button-outline"
-                  variant="outlined"
-                  disabled={false}
-                >
-                  <a href="#projects">View Projects</a>
-                </Button>
-              </div>
+              <Info />
             </div>
           </Slide>
           <Slide direction="left" in={true} timeout={1000}>

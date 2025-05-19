@@ -25,11 +25,11 @@ export default function Projects() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
               <Card key={project.id} className="project-card overflow-hidden ">
-                <div className="h-48 overflow-hidden">
+                <div className="h-48 mt-2 overflow-hidden ">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-auto object-cover hover:scale-105 "
+                    className="w-full h-full object-contain rounded-lg  hover:scale-105 "
                     loading="lazy"
                   />
                 </div>

@@ -1,6 +1,6 @@
 import { navLinks } from "../data/NavigationItems";
 import { Link as ScrollLink } from "react-scroll";
-import SocialMedia from "./SocialMedia";
+import SocialMedia from "./childComponents/SocialMedia";
 
 import {
   FaLinkedin,
@@ -59,6 +59,12 @@ export default function Footer() {
               </ScrollLink>
             </button>
           </div>
+        </div>
+        <div className="mt-4 pt-2 border-t border-gray-800 ">
+          <p className="text-center text-gray-500">
+            © copyright {currentYear} Arjun Paudel. <br /> Design and developed
+            by <a href="http://ashagaire.com.np">ashagaire.com.np</a>
+          </p>
         </div>
       </div>
     </footer>

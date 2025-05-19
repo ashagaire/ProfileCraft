@@ -41,7 +41,6 @@ function App() {
         </section>
       </div>
       <Footer />
-      {/* <ToastContainer /> */}
     </div>
   );
 }

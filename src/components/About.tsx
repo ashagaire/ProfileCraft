@@ -1,10 +1,11 @@
 import { Button } from "@mui/material";
 import { FaLinkedin, FaGithub, FaCertificate } from "react-icons/fa";
 import profileImage from "../assets/profile_about.jpg";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function About() {
   return (
-    <section id="about" className="py-8 bg-gray-100">
+    <section id="about" className="py-16 bg-gray-100">
       <div className="container mx-auto px-6">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-2">About Me</h2>
@@ -103,7 +104,15 @@ export default function About() {
                   color="primary"
                   className="custom-button"
                 >
-                  <a href="#contact">Contact Me</a>
+                  <ScrollLink
+                    to="contact"
+                    smooth={true}
+                    duration={500}
+                    offset={-65}
+                  >
+                    Contact Me
+                  </ScrollLink>
+                  {/* <a href="#contact">Contact Me</a> */}
                 </Button>
               </div>
             </div>
