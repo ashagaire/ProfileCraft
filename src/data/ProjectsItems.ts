@@ -30,7 +30,7 @@ export const projects: ProjectsProps[] = [
       "Designed and implemented a pneumatic system for reciprocating motion in a bicycle, along with an assistive transmission system.",
     image: Pneumatic,
     tags: ["SolidWorks", "Pneumatics", "Physics", "3D Modeling"],
-    url: "https://drive.proton.me/urls/330ZYXR5XR#lJZ6BEIrr3Wf",
+    url: "https://1drv.ms/b/c/3cd3ee4c6c17f4cd/EbitFNg3pRpEg6yL9eMWv4QBd16rYpsjzFpcQ4W5YkB7fQ?e=3CyoPU",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const projects: ProjectsProps[] = [
       "Led a project to design and model a screw conveyor, including engineering specifications, strength calculations, and 3D modeling.",
     image: ScrewConveyor,
     tags: ["SolidWorks", "Engineering", "Calculations", "Project Management"],
-    url: "https://drive.proton.me/urls/F45FSDHFMG#jxkrUpEtuPVs",
+    url: "https://1drv.ms/b/c/3cd3ee4c6c17f4cd/ES9SrMTYkatFrJl0CMupJi4BInHangmqOQguAJcyzevyBA?e=6ZsQ2z",
   },
   {
     id: 4,

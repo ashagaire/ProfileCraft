@@ -1,7 +1,7 @@
 import { FaCertificate } from "react-icons/fa";
 import { skills, competencies, certificates } from "../data/Skills";
 import { Card, CardContent } from "@mui/material";
-import LinearProgress from "@mui/material/LinearProgress";
+import LaunchIcon from "@mui/icons-material/Launch";
 
 export default function Skills() {
   return (
@@ -33,6 +33,20 @@ export default function Skills() {
                       <h4 className="font-medium text-gray-800">
                         {comp.title}
                       </h4>
+                      {comp.title == "3D Modeling" && (
+                        <a
+                          href="https://1drv.ms/b/c/3cd3ee4c6c17f4cd/EcPF5VNNIKlBtC6-OjxayeEBwWvoDv6TRtzEhH4EN_tWNQ?e=plPIGb"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="preview-link"
+                        >
+                          <LaunchIcon
+                            fontSize="small"
+                            color="warning"
+                            className="pl-1 ml-2"
+                          />
+                        </a>
+                      )}
                     </div>
                     <p className="text-gray-600 text-sm">{comp.description}</p>
                   </CardContent>

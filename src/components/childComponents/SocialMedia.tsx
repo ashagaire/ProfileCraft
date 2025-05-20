@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 interface SocialMediaProps {
   textCss: string;

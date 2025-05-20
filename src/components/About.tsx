@@ -112,7 +112,6 @@ export default function About() {
                   >
                     Contact Me
                   </ScrollLink>
-                  {/* <a href="#contact">Contact Me</a> */}
                 </Button>
               </div>
             </div>

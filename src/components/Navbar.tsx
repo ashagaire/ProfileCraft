@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
 import logoImage from "../assets/logo.png";
 import { navLinks } from "../data/NavigationItems";
-import CV from "./childComponents/CV";
+import CV from "./childComponents/CVPeview";
 import PreviewButton from "./childComponents/PreviewButton";
 
 export default function Navbar() {

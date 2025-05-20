@@ -6,8 +6,7 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import PreviewButton from "./childComponents/PreviewButton";
-import { Spa } from "@mui/icons-material";
+import PreviewPDF from "./childComponents/ThesisPreview";
 
 export default function Experience() {
   return (
@@ -40,13 +39,18 @@ export default function Experience() {
                     <Card className="ml-2 md:ml-4">
                       <CardContent>
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                          <div className=" space-x-2">
-                            <h3 className="text-xl font-bold text-primary">
-                              {exp.title}
+                          <div>
+                            <div className="flex flex-col md:flex-row">
+                              <h3 className="text-xl font-bold text-primary">
+                                {exp.title}
+                              </h3>
                               {exp.title == "Bachelor's Thesis Project" && (
-                                <PreviewButton href="https://1drv.ms/b/c/3cd3ee4c6c17f4cd/EbitFNg3pRpEg6yL9eMWv4QBd16rYpsjzFpcQ4W5YkB7fQ?e=3CyoPU" />
+                                <div className=" md:border-l-2 md:border-orange-400 pl-1 md:pl-4 ml-1 md:ml-4 ">
+                                  <PreviewPDF />
+                                </div>
                               )}
-                            </h3>
+                            </div>
+
                             <p className="text-gray-700">{exp.company}</p>
                           </div>
                           <div className="mt-2 md:mt-0 md:text-right">

@@ -148,3 +148,29 @@
 .Toastify__toast:hover {
   opacity: 0.9;
 }
+
+.preview-link {
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  color: #f39419;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.preview-link:hover {
+  color: #f97316;
+}
+
+.preview-icon {
+  color: #f39419 !important;
+  margin-left: 8px;
+  height: 16px;
+  width: 16px;
+  transition: transform 0.3s;
+}
+
+.preview-link:hover .preview-icon:hover {
+  color: #f97316;
+}

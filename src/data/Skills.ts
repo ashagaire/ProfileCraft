@@ -52,7 +52,7 @@ export const competencies: CompetencyProps[] = [
   {
     id: 4,
     icon: FaRobot,
-    title: "Automation",
+    title: `Automation `,
     description: "Experience with PLC programming and industrial automation.",
   },
   {
