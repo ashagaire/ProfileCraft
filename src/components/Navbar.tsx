@@ -4,9 +4,12 @@ import { Link as ScrollLink } from "react-scroll";
 import logoImage from "../assets/logo.png";
 import { navLinks } from "../data/NavigationItems";
 import CV from "./childComponents/CV";
+import PreviewButton from "./childComponents/PreviewButton";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const hrefCV =
+    "https://1drv.ms/b/c/3cd3ee4c6c17f4cd/EQ766Q1omRJIsYrqHi3lvJQBEGWmJ0Zi00JQwosbw7xiQg?e=eP2WT7";
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -42,7 +45,12 @@ export default function Navbar() {
                 {link.label}
               </ScrollLink>
             ))}
-            <CV />
+            <div className="hidden md:block lg:hidden">
+              <PreviewButton href={hrefCV} />
+            </div>
+            <div className="hidden lg:block ">
+              <CV />
+            </div>
           </nav>
 
           {/* Mobile Navigation Toggle */}
@@ -81,7 +89,9 @@ export default function Navbar() {
                 </ScrollLink>
               ))}
               <div className="mt-4">
-                <CV />
+                <div>
+                  <PreviewButton href={hrefCV} />
+                </div>
               </div>
             </div>
           </div>

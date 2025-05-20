@@ -21,21 +21,11 @@ export default function ContactInformation() {
 
         <div className="flex items-start mb-4 hover:translate-x-1 transition-transform duration-200">
           <div className="text-primary mr-4 mt-1">
-            {FaPhone({ className: "text-xl" })}
-          </div>
-          <div>
-            <h4 className="font-medium text-gray-900">Phone</h4>
-            <p className="text-gray-700">+358 XX XXXX XXX</p>
-          </div>
-        </div>
-
-        <div className="flex items-start mb-4 hover:translate-x-1 transition-transform duration-200">
-          <div className="text-primary mr-4 mt-1">
             {FaMapMarkerAlt({ className: "text-xl" })}
           </div>
           <div>
             <h4 className="font-medium text-gray-900">Location</h4>
-            <p className="text-gray-700">Finland</p>
+            <p className="text-gray-700">Rauma, Finland</p>
           </div>
         </div>
       </CardContent>

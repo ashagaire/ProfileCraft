@@ -63,7 +63,10 @@ export default function Footer() {
         <div className="mt-4 pt-2 border-t border-gray-800 ">
           <p className="text-center text-gray-500">
             © copyright {currentYear} Arjun Paudel. <br /> Design and developed
-            by <a href="http://ashagaire.com.np">ashagaire.com.np</a>
+            by{" "}
+            <a target="_blank" href="http://ashagaire.com.np">
+              ashagaire.com.np
+            </a>
           </p>
         </div>
       </div>
