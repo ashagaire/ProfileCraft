@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import { useState } from "react";
 import PDFDialog from "./PDFDialog";
 
-export default function CV() {
+export default function CVPreview() {
   const [openCV, setOpenCV] = useState(false);
 
   const handleOpenCV = () => setOpenCV(true);

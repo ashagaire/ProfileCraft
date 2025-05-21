@@ -28,7 +28,7 @@ export default function About() {
             </h3>
             <p className="text-gray-700 mb-6">
               I am a Mechanical Engineer with expertise in design, analysis, and
-              technical documentation. Currently serving as a Design Handover
+              technical documentation. Recently worked as a Design Handover
               Engineer at the Olkiluoto Nuclear Power Plant, I specialize in
               technical documentation management, client communication, and
               engineering coordination.

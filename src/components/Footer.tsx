@@ -2,13 +2,7 @@ import { navLinks } from "../data/NavigationItems";
 import { Link as ScrollLink } from "react-scroll";
 import SocialMedia from "./childComponents/SocialMedia";
 
-import {
-  FaLinkedin,
-  FaGithub,
-  FaTwitter,
-  FaInstagram,
-  FaArrowUp,
-} from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

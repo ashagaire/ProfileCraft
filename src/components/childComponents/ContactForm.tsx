@@ -6,13 +6,15 @@ import { toast } from "react-toastify";
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("xqaqnbjn");
-
+  const [emailError, setEmailError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -32,6 +34,19 @@ export default function ContactForm() {
     }
   }, [state.succeeded]);
 
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!emailRegex.test(formData.email)) {
+      setEmailError("Please enter a valid email address.");
+      return;
+    } else {
+      setEmailError("");
+    }
+
+    handleSubmit(e);
+  };
+
   return (
     <>
       <Card>
@@ -40,7 +55,7 @@ export default function ContactForm() {
             Send Me a Message
           </h3>
 
-          <form onSubmit={(e) => handleSubmit(e)}>
+          <form onSubmit={handleFormSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div className="form-group">
                 <label htmlFor="name" className="block text-gray-700 mb-2">
@@ -54,6 +69,7 @@ export default function ContactForm() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your Name"
+                  className="w-full"
                 />
               </div>
               <div className="form-group">
@@ -67,6 +83,9 @@ export default function ContactForm() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Your Email"
+                  error={!!emailError}
+                  helperText={emailError || " "}
+                  className="w-full"
                 />
               </div>
             </div>

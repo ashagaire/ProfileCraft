@@ -10,7 +10,7 @@ interface PreviewButtonProps {
 
 export default function PreviewButton({
   href,
-  label = "Preview CV",
+  label = "Preview",
   download = false,
   size = "small",
 }: PreviewButtonProps) {

@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
 import logoImage from "../assets/logo.png";
 import { navLinks } from "../data/NavigationItems";
-import CV from "./childComponents/CVPeview";
+import CVPreview from "./childComponents/CVPreview";
 import PreviewButton from "./childComponents/PreviewButton";
 
 export default function Navbar() {
@@ -46,10 +46,10 @@ export default function Navbar() {
               </ScrollLink>
             ))}
             <div className="hidden md:block lg:hidden">
-              <PreviewButton href={hrefCV} />
+              <PreviewButton href={hrefCV} label={"Preview CV"} />
             </div>
             <div className="hidden lg:block ">
-              <CV />
+              <CVPreview />
             </div>
           </nav>
 
@@ -90,7 +90,7 @@ export default function Navbar() {
               ))}
               <div className="mt-4">
                 <div>
-                  <PreviewButton href={hrefCV} />
+                  <PreviewButton href={hrefCV} label={"Preview CV"} />
                 </div>
               </div>
             </div>

@@ -12,7 +12,7 @@ export default function Info() {
       </h3>
       <p className="text-lg text-gray-600 mb-8">
         A diligent professional with extensive skills in mechanical modeling,
-        analysis, machine design, and technical documentation. Currently working
+        analysis, machine design, and technical documentation. Recently worked
         with nuclear power plant systems and documentation.
       </p>
       <div className="flex flex-wrap gap-4">
