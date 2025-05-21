@@ -20,15 +20,6 @@ interface CompetencyProps {
   description: string;
 }
 
-export const skills: SkillProps[] = [
-  { name: "SolidWorks", percentage: 90 },
-  { name: "MATLAB", percentage: 85 },
-  { name: "FluidSIM (PLC Programming)", percentage: 80 },
-  { name: "MS Excel", percentage: 95 },
-  { name: "CIROS Robotics", percentage: 75 },
-  { name: "Blender", percentage: 70 },
-];
-
 export const competencies: CompetencyProps[] = [
   {
     id: 1,

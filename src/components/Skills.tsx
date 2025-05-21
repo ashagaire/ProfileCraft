@@ -1,5 +1,5 @@
 import { FaCertificate } from "react-icons/fa";
-import { skills, competencies, certificates } from "../data/Skills";
+import { competencies, certificates } from "../data/Skills";
 import { Card, CardContent } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
 

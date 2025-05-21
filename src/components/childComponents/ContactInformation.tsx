@@ -1,5 +1,5 @@
-import { Card, CardContent, TextField, Button } from "@mui/material";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { Card, CardContent } from "@mui/material";
+import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function ContactInformation() {
   return (
