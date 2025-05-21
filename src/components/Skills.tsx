@@ -33,7 +33,7 @@ export default function Skills() {
                       <h4 className="font-medium text-gray-800">
                         {comp.title}
                       </h4>
-                      {comp.title == "3D Modeling" && (
+                      {comp.title === "3D Modeling" && (
                         <a
                           href="https://1drv.ms/b/c/3cd3ee4c6c17f4cd/EcPF5VNNIKlBtC6-OjxayeEBwWvoDv6TRtzEhH4EN_tWNQ?e=plPIGb"
                           target="_blank"

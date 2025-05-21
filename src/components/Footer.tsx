@@ -1,12 +1,14 @@
 import { navLinks } from "../data/NavigationItems";
+import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import SocialMedia from "./childComponents/SocialMedia";
-
+import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+import GameScoreDialog from "./childComponents/GameScoreDialog";
 import { FaArrowUp } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
+  const [open, setOpen] = useState(false);
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-6">
@@ -36,6 +38,15 @@ export default function Footer() {
                 {link.label}
               </ScrollLink>
             ))}
+            <>
+              <SportsEsportsIcon
+                fontSize="small"
+                className="text-gray-400 hover:text-white"
+                onClick={() => setOpen(true)}
+                style={{ cursor: "pointer" }}
+              />
+              <GameScoreDialog open={open} onClose={() => setOpen(false)} />
+            </>
           </nav>
 
           <div>

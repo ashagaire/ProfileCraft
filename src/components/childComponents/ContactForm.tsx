@@ -32,7 +32,7 @@ export default function ContactForm() {
     } else if (state.errors && Object.keys(state.errors).length > 0) {
       toast.error("Message Failed To Send!");
     }
-  }, [state.succeeded]);
+  }, [state.succeeded, state.errors]);
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
